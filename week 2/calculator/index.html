@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Calculator</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #393837, #d9a232);
+      font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      width: 300px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      color: white;
+    }
+
+    .add {
+      background: #28a745;
+    }
+
+    .subtract {
+      background: #dc3545;
+    }
+
+    .multiply {
+      background: #007bff;
+    }
+
+    .divide {
+      background: #ff9800;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 22px;
+      color: #222;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <h2>Simple Calculator</h2>
+
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+
+    <div class="buttons">
+      <button class="add" onclick="add()">Add</button>
+      <button class="subtract" onclick="subtract()">Subtract</button>
+      <button class="multiply" onclick="multiply()">Multiply</button>
+      <button class="divide" onclick="divide()">Divide</button>
+    </div>
+
+    <div id="result">Result: 0</div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
