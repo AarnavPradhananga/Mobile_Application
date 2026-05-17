@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATM System</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+
+    body{
+      font-family: Arial;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    input{
+      padding: 10px;
+      width: 220px;
+    }
+
+    button{
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #balance{
+      color: green;
+      font-size: 25px;
+    }
+
+    #message{
+      color: blue;
+      font-size: 20px;
+    }
+
+    #eyeBtn{
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>ATM System</h1>
+
+  <h2 id="balance">
+    Current Balance: Rs. 10000
+  </h2>
+
+  <!-- Eye Button -->
+  <button id="eyeBtn">
+    <i data-lucide="eye"></i>
+  </button>
+
+  <br><br>
+
+  <input type="number" id="amount" placeholder="Enter Amount">
+
+  <br>
+
+  <button onclick="withdraw()">Withdraw</button>
+
+  <button onclick="deposit()">Deposit</button>
+
+  <p id="message"></p>
+
+  <!-- Connect JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
