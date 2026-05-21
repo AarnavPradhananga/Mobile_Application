@@ -3,7 +3,6 @@ let pinCode = 1234;
 
 let hidden = false;
 
-// load lucide icons
 lucide.createIcons();
 
 function updateBalance(){
@@ -13,7 +12,6 @@ function updateBalance(){
         document.getElementById("balance").innerHTML =
         "Current Balance: Rs. " + balance;
 
-        // open eye icon
         $("#eyeBtn").html(`
             <i data-lucide="eye"></i>
         `);
@@ -24,13 +22,11 @@ function updateBalance(){
         document.getElementById("balance").innerHTML =
         "Current Balance: ******";
 
-        // closed eye icon
         $("#eyeBtn").html(`
             <i data-lucide="eye-off"></i>
         `);
     }
 
-    // refresh lucide icons
     lucide.createIcons();
 }
 
@@ -44,7 +40,6 @@ function withdraw(){
     let amount =
     parseInt(document.getElementById("amount").value);
 
-    // modulus concept
     if(amount % 100 !== 0){
 
         showMessage("Amount must be multiple of 100");
@@ -77,7 +72,6 @@ function deposit(){
     let amount =
     parseInt(document.getElementById("amount").value);
 
-    // modulus concept
     if(amount % 100 !== 0){
 
         showMessage("Amount must be multiple of 100");
