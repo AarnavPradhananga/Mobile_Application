@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Profile Card</title>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js" defer></script>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, sans-serif;
+      min-height:100vh;
+      background: linear-gradient(135deg,#667eea,#764ba2);
+      padding:40px;
+    }
+
+    h1{
+      text-align:center;
+      color:white;
+      margin-bottom:30px;
+      font-size:40px;
+    }
+
+    #profile-card{
+      width:380px;
+      background:white;
+      padding:25px;
+      margin:20px auto;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      transition:0.4s;
+      position:relative;
+    }
+
+    #profile-photo{
+      width:160px;
+      height:160px;
+      border-radius:10px;
+      display:block;
+      margin:0 auto 20px;
+      transition:0.4s;
+    }
+
+    #student-name{
+      text-align:center;
+      margin-bottom:10px;
+      color:#333;
+    }
+
+    #student-bio{
+      text-align:center;
+      margin-bottom:20px;
+      color:#555;
+      line-height:1.5;
+    }
+
+    input{
+      width:100%;
+      padding:12px;
+      margin-bottom:20px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:16px;
+    }
+
+    h3{
+      margin-bottom:10px;
+      color:#333;
+    }
+
+    #skills-list{
+      padding-left:20px;
+      color:#444;
+    }
+
+    #controls{
+      max-width:1100px;
+      margin:30px auto;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:12px;
+    }
+
+    button{
+      padding:12px 18px;
+      border:none;
+      border-radius:10px;
+      background:#4f46e5;
+      color:white;
+      cursor:pointer;
+      font-size:14px;
+      transition:0.3s;
+      box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    button:hover{
+      transform:translateY(-3px);
+      background:#3730a3;
+    }
+
+    #output{
+      max-width:700px;
+      margin:30px auto;
+      background:white;
+      padding:20px;
+      border-radius:15px;
+      min-height:50px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.15);
+      font-size:18px;
+    }
+
+    /* Classes */
+
+    .highlighted{
+      border:4px solid gold;
+    }
+
+    .dark-mode{
+      background:#1e293b !important;
+      color:white !important;
+    }
+
+    .rounded{
+      border-radius:50%;
+    }
+
+    .shadow{
+      box-shadow:0 0 25px rgba(0,0,0,0.5);
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <h1>jQuery Profile Card</h1>
+
+  <div id="profile-card">
+
+    <img
+      id="profile-photo"
+      src="C:\Users\aarna\Downloads\profile.jpg"
+      alt="Profile Photo"
+    >
+
+    <h2 id="student-name">Aarnav</h2>
+
+    <p id="student-bio">
+      <strong>Frontend Developer</strong> who enjoys animations,
+      jQuery effects and modern UI design.
+    </p>
+
+    <input type="text" id="nickname-input" placeholder="Enter nickname">
+
+    <h3>Skills</h3>
+
+    <ul id="skills-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>jQuery</li>
+    </ul>
+
+  </div>
+
+  <div id="controls">
+
+    <button id="show-name">Show Name</button>
+    <button id="change-name">Change Name</button>
+    <button id="show-bio">Show Bio</button>
+    <button id="get-input">Get Input</button>
+    <button id="set-input">Set Input</button>
+
+    <button id="highlight-card">Highlight Card</button>
+    <button id="remove-highlight">Remove Highlight</button>
+    <button id="toggle-dark">Toggle Dark Mode</button>
+    <button id="toggle-rounded">Toggle Rounded</button>
+
+    <button id="red-bg">Red Background</button>
+    <button id="reset-bg">Reset Background</button>
+
+    <button id="hide-photo">Hide Photo</button>
+    <button id="show-photo">Show Photo</button>
+    <button id="toggle-bio">Toggle Bio</button>
+
+    <button id="fade-out">Fade Out Card</button>
+    <button id="fade-in">Fade In Card</button>
+    <button id="fade-half">Fade to 50%</button>
+
+    <button id="slide-up">Slide Up Skills</button>
+    <button id="slide-down">Slide Down Skills</button>
+    <button id="slide-toggle">Slide Toggle Skills</button>
+
+    <button id="animate-card">Animate Card</button>
+
+  </div>
+
+  <div id="output">
+    Output will appear here...
+  </div>
+
+</body>
+</html>
